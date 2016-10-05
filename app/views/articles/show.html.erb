@@ -7,6 +7,7 @@
 </p>
 <%= link_to "All tags", tags_path %>
 <p><%= @article.body %></p>
+<p><%= image_tag @article.image.url %></p>
 <%= link_to "delete", article_path(@article), method: :delete, data: {confirm: "Really delete the article?"} %>
 <%= link_to "edit", edit_article_path(@article) %>
 <h3>Comments (<%= @article.comments.size if @article.comments != nil %>)</h3>
